@@ -1,4 +1,121 @@
 starting_setup_mamluks_effect = {
+	c:MAM = {
+		remove_country_modifier = ars_belli_starting_setup_pending
+		add_country_modifier = {
+			modifier = ars_belli_starting_setup_fired
+			years = 1
+			mode = add_and_extend
+		}
+
+		# Northern Hejaz goes to Medina before subject release.
+		location:umluj = { add_core = c:MDA change_location_owner = c:MDA }
+		location:al_hawra = { add_core = c:MDA change_location_owner = c:MDA }
+		location:al_manjur = { add_core = c:MDA change_location_owner = c:MDA }
+		location:al_maramiyah = { add_core = c:MDA change_location_owner = c:MDA }
+		location:al_ula = { add_core = c:MDA change_location_owner = c:MDA }
+		location:al_bleiteh = { add_core = c:MDA change_location_owner = c:MDA }
+		location:al_farah_ula = { add_core = c:MDA change_location_owner = c:MDA }
+		location:al_marwa = { add_core = c:MDA change_location_owner = c:MDA }
+		location:az_zubayir = { add_core = c:MDA change_location_owner = c:MDA }
+		location:mughayra = { add_core = c:MDA change_location_owner = c:MDA }
+		location:duba = { add_core = c:MDA change_location_owner = c:MDA }
+		location:ad_disah = { add_core = c:MDA change_location_owner = c:MDA }
+		location:al_azlam = { add_core = c:MDA change_location_owner = c:MDA }
+		location:al_wajh = { add_core = c:MDA change_location_owner = c:MDA }
+		location:bada_yaqub = { add_core = c:MDA change_location_owner = c:MDA }
+		location:bir_al_qurr = { add_core = c:MDA change_location_owner = c:MDA }
+		location:tabuk_arabia = { add_core = c:MDA change_location_owner = c:MDA }
+		location:al_khanbarah = { add_core = c:MDA change_location_owner = c:MDA }
+		location:al_muazzam = { add_core = c:MDA change_location_owner = c:MDA }
+		location:al_ukhaydir = { add_core = c:MDA change_location_owner = c:MDA }
+		location:bajdah = { add_core = c:MDA change_location_owner = c:MDA }
+		location:bir_ibn_hermas = { add_core = c:MDA change_location_owner = c:MDA }
+		location:dhat_al_hajj = { add_core = c:MDA change_location_owner = c:MDA }
+		location:aynuna = { add_core = c:MDA change_location_owner = c:MDA }
+		location:al_bad = { add_core = c:MDA change_location_owner = c:MDA }
+		location:al_muwaylih = { add_core = c:MDA change_location_owner = c:MDA }
+		location:haql = { add_core = c:MDA change_location_owner = c:MDA }
+		location:makna = { add_core = c:MDA change_location_owner = c:MDA }
+
+		# Directly held Syrian interior and coast go to Al Fadl as the vanilla Syrian stand-in.
+		location:ayntab = { add_core = c:FDL change_location_owner = c:FDL }
+		location:dluk = { add_core = c:FDL change_location_owner = c:FDL }
+		location:beirut = { add_core = c:FDL change_location_owner = c:FDL }
+		location:baalbek = { add_core = c:FDL change_location_owner = c:FDL }
+		location:deir_qamar = { add_core = c:FDL change_location_owner = c:FDL }
+		location:sidon = { add_core = c:FDL change_location_owner = c:FDL }
+		location:tripoli_syria = { add_core = c:FDL change_location_owner = c:FDL }
+		location:damascus = { add_core = c:FDL change_location_owner = c:FDL }
+		location:al_bab = { add_core = c:FDL change_location_owner = c:FDL }
+		location:aleppo = { add_core = c:FDL change_location_owner = c:FDL }
+		location:antioch = { add_core = c:FDL change_location_owner = c:FDL }
+		location:arsuz = { add_core = c:FDL change_location_owner = c:FDL }
+		location:artah = { add_core = c:FDL change_location_owner = c:FDL }
+		location:baniyas = { add_core = c:FDL change_location_owner = c:FDL }
+		location:dabiq = { add_core = c:FDL change_location_owner = c:FDL }
+		location:hama = { add_core = c:FDL change_location_owner = c:FDL }
+		location:homs = { add_core = c:FDL change_location_owner = c:FDL }
+		location:idlib = { add_core = c:FDL change_location_owner = c:FDL }
+		location:jabbul = { add_core = c:FDL change_location_owner = c:FDL }
+		location:jableh = { add_core = c:FDL change_location_owner = c:FDL }
+		location:kafartab = { add_core = c:FDL change_location_owner = c:FDL }
+		location:latakia = { add_core = c:FDL change_location_owner = c:FDL }
+		location:manbij = { add_core = c:FDL change_location_owner = c:FDL }
+		location:maskanah = { add_core = c:FDL change_location_owner = c:FDL }
+		location:masyaf = { add_core = c:FDL change_location_owner = c:FDL }
+		location:nabek = { add_core = c:FDL change_location_owner = c:FDL }
+		location:qusayr = { add_core = c:FDL change_location_owner = c:FDL }
+		location:tartus = { add_core = c:FDL change_location_owner = c:FDL }
+		location:zardana = { add_core = c:FDL change_location_owner = c:FDL }
+
+		# Southern Levant becomes an independent Jerusalem/Quds state.
+		location:jerusalem = { add_core = c:KOJ }
+		location:acre = { add_core = c:KOJ }
+		location:amman = { add_core = c:KOJ }
+		location:aqaba = { add_core = c:KOJ }
+		location:beersheba = { add_core = c:KOJ }
+		location:gaza = { add_core = c:KOJ }
+		location:hebron = { add_core = c:KOJ }
+		location:karak = { add_core = c:KOJ }
+		location:maan = { add_core = c:KOJ }
+		location:majdal = { add_core = c:KOJ }
+		location:nablus = { add_core = c:KOJ }
+		location:safed = { add_core = c:KOJ }
+		location:sughar = { add_core = c:KOJ }
+		location:jaffa = { add_core = c:KOJ }
+		location:al_quwayrah = { add_core = c:KOJ }
+		location:shoubak = { add_core = c:KOJ }
+		location:madaba = { add_core = c:KOJ }
+
+		if = {
+			limit = {
+				NOT = { country_exists = c:KOJ }
+			}
+			create_country_from_cores_in_our_locations = c:KOJ
+			c:KOJ = {
+				change_religion = religion:sunni
+				change_religion_for_ruler_and_family = { country = c:KOJ religion = religion:sunni }
+				change_government_type = government_type:monarchy
+				set_capital = location:jerusalem
+			}
+			add_truce_with = {
+				target = c:KOJ
+				mutual = yes
+				years = 5
+			}
+		}
+
+		every_subject = {
+			overlord = {
+				cancel_subject = prev
+				add_truce_with = {
+					target = prev
+					mutual = yes
+					years = 5
+				}
+			}
+		}
+	}
 }
 
 starting_setup_jalayirids_effect = {
@@ -17,10 +134,28 @@ starting_setup_hungary_effect = {
 }
 
 starting_setup_game_start_effect = {
-	starting_setup_mamluks_effect = yes
+	c:MAM ?= {
+		add_country_modifier = {
+			modifier = ars_belli_starting_setup_pending
+			years = 1
+			mode = add_and_extend
+		}
+	}
 	starting_setup_jalayirids_effect = yes
 	starting_setup_france_effect = yes
 	starting_setup_castile_effect = yes
 	starting_setup_bohemia_effect = yes
 	starting_setup_hungary_effect = yes
+}
+
+starting_setup_monthly_pulse_effect = {
+	c:MAM ?= {
+		if = {
+			limit = {
+				has_country_modifier = ars_belli_starting_setup_pending
+				NOT = { has_country_modifier = ars_belli_starting_setup_fired }
+			}
+			starting_setup_mamluks_effect = yes
+		}
+	}
 }
