@@ -1,0 +1,26 @@
+starting_setup_mamluks_effect = {
+}
+
+starting_setup_jalayirids_effect = {
+}
+
+starting_setup_france_effect = {
+}
+
+starting_setup_castile_effect = {
+}
+
+starting_setup_bohemia_effect = {
+}
+
+starting_setup_hungary_effect = {
+}
+
+starting_setup_game_start_effect = {
+	starting_setup_mamluks_effect = yes
+	starting_setup_jalayirids_effect = yes
+	starting_setup_france_effect = yes
+	starting_setup_castile_effect = yes
+	starting_setup_bohemia_effect = yes
+	starting_setup_hungary_effect = yes
+}

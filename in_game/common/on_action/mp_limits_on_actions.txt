@@ -6,7 +6,14 @@
 
 on_game_start = {
 	on_actions = {
+		starting_setup_game_start
 		mp_limits_game_start
+	}
+}
+
+starting_setup_game_start = {
+	effect = {
+		starting_setup_game_start_effect = yes
 	}
 }
 
