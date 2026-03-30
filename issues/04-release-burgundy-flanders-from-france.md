@@ -1,5 +1,9 @@
 # Release Burgundy and Flanders from France
 
+## Status
+
+Todo
+
 ## Parent PRD
 
 `prds/starting-setup.md`
@@ -14,7 +18,7 @@ HITL
 
 ## What to change
 
-At game start, release two countries from France to curb French snowballing:
+At bookmark start, release two countries from France to curb French snowballing:
 
 1. **Release Burgundy** as an independent country from France.
 2. **Release Flanders** as an independent country from France.
@@ -25,10 +29,15 @@ Implementation notes:
 - Research the vanilla tags for Burgundy and Flanders and verify they are releasable from France in the 1337 start.
 - Verify which provinces constitute Burgundy vs. Flanders to ensure the split is historically appropriate.
 - Both countries already have some unique content in vanilla, so they should be functional as independent tags.
+- Implement this in bookmark/start files so the changes are visible in the lobby and country picker from day 0.
+- Use `main_menu/setup/start/10_countries.txt` for ownership and country setup changes.
+- Use `main_menu/setup/start/12_diplomacy.txt` if France starts with subject or other diplomatic links that must be removed/adjusted.
+- Preserve vanilla formatting/order and annotate changed spots with short explanatory comments.
 
 ## Mod files involved
 
-- `in_game/common/scripted_effects/starting_setup_effects.txt` -- **Modify**. Fill in the France regional effect with release logic for Burgundy and Flanders.
+- `main_menu/setup/start/10_countries.txt` -- **Modify**. Release Burgundy and Flanders in the bookmark state.
+- `main_menu/setup/start/12_diplomacy.txt` -- **Modify if needed**. Remove or adjust starting diplomatic links.
 
 ## Acceptance criteria
 
@@ -41,7 +50,7 @@ Implementation notes:
 
 ## Blocked by
 
-- `issues/01-hook-starting-setup-on-game-start.md`
+None.
 
 ## Changes addressed
 

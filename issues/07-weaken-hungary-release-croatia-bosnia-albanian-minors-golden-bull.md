@@ -1,5 +1,9 @@
 # Weaken Hungary: Release Croatia, Bosnia, Albanian Minors; Grant Golden Bull
 
+## Status
+
+Todo
+
 ## Parent PRD
 
 `prds/starting-setup.md`
@@ -14,7 +18,7 @@ HITL
 
 ## What to change
 
-At game start, reduce Hungary's dominance in the Balkans through territorial releases and an economic constraint:
+At bookmark start, reduce Hungary's dominance in the Balkans through territorial releases and an economic constraint:
 
 1. **Release Croatia** as an independent country from Hungary.
 2. **Release Bosnia** as an independent country from Hungary.
@@ -26,11 +30,17 @@ Implementation notes:
 - Research which Albanian tags exist under Naples' control. These may be vassals, cores, or directly owned provinces. Identify the appropriate tags to release.
 - Research the Golden Bull of 1222 privilege. Verify it exists in vanilla as a noble estate privilege. If it exists, use `add_estate_privilege` or equivalent to grant it. If it doesn't exist, a custom privilege or modifier may need to be created under `common/estates/`.
 - The Golden Bull should have a significant economic penalty to meaningfully slow Hungary's scaling.
+- Implement territorial releases in bookmark/start files so the changes are visible in the lobby and country picker from day 0.
+- Use `main_menu/setup/start/10_countries.txt` for ownership and country setup changes.
+- Use `main_menu/setup/start/12_diplomacy.txt` if Hungary or Naples start with subject or other diplomatic links that must be removed/adjusted.
+- If the Golden Bull must be granted in a way the bookmark files cannot express cleanly, keep that specific piece as a runtime hook.
+- Preserve vanilla formatting/order and annotate changed spots with short explanatory comments.
 
 ## Mod files involved
 
-- `in_game/common/scripted_effects/starting_setup_effects.txt` -- **Modify**. Fill in the Balkans regional effect with release logic for Croatia, Bosnia, Albanian minors, and privilege granting for Hungary.
-- Possibly `in_game/common/estates/` -- **New file or modify existing** if the Golden Bull of 1222 privilege needs to be created or if granting it requires estate configuration.
+- `main_menu/setup/start/10_countries.txt` -- **Modify**. Release Croatia, Bosnia, and Albanian minors in the bookmark state.
+- `main_menu/setup/start/12_diplomacy.txt` -- **Modify if needed**. Remove or adjust starting diplomatic links.
+- Possibly `in_game/common/estates/` or a runtime hook -- **Modify if needed** for granting the Golden Bull of 1222 privilege.
 
 ## Acceptance criteria
 
@@ -45,7 +55,7 @@ Implementation notes:
 
 ## Blocked by
 
-- `issues/01-hook-starting-setup-on-game-start.md`
+None.
 
 ## Changes addressed
 

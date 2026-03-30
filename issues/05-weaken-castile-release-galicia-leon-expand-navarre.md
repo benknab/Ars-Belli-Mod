@@ -1,5 +1,9 @@
 # Weaken Castile: Release Galicia, Leon, Expand Navarre
 
+## Status
+
+Todo
+
 ## Parent PRD
 
 `prds/starting-setup.md`
@@ -14,7 +18,7 @@ HITL
 
 ## What to change
 
-At game start, reduce Castile's dominance in Iberia by releasing two countries and expanding a third:
+At bookmark start, reduce Castile's dominance in Iberia by releasing two countries and expanding a third:
 
 1. **Release Galicia** as an independent country from Castile.
 2. **Release Leon** as an independent country from Castile.
@@ -25,11 +29,15 @@ Implementation notes:
 - For the Basque province transfer, identify all provinces with Basque culture in Castile's starting territory. This may require a culture-based scope or hardcoded province IDs.
 - Verify that the expanded Navarre is not disproportionately strong for its intended role as a small buffer state.
 - The goal is Castile remaining the strongest Iberian power, but close enough to Aragon + Portugal that diplomacy as equals is viable.
+- Implement this in bookmark/start files so the changes are visible in the lobby and country picker from day 0.
+- Use `main_menu/setup/start/10_countries.txt` for ownership and country setup changes.
+- Use `main_menu/setup/start/12_diplomacy.txt` if Castile starts with subject or other diplomatic links that must be removed/adjusted.
+- Preserve vanilla formatting/order and annotate changed spots with short explanatory comments.
 
 ## Mod files involved
 
-- `in_game/common/scripted_effects/starting_setup_effects.txt` -- **Modify**. Fill in the Iberia regional effect with release logic for Galicia and Leon, and province transfer logic for Basque provinces to Navarre.
-- Possibly `in_game/common/scripted_triggers/` -- **New file** if a `is_basque_culture_province` trigger is needed for identifying provinces to transfer.
+- `main_menu/setup/start/10_countries.txt` -- **Modify**. Release Galicia and Leon and transfer Basque provinces to Navarre in the bookmark state.
+- `main_menu/setup/start/12_diplomacy.txt` -- **Modify if needed**. Remove or adjust starting diplomatic links.
 
 ## Acceptance criteria
 
@@ -43,7 +51,7 @@ Implementation notes:
 
 ## Blocked by
 
-- `issues/01-hook-starting-setup-on-game-start.md`
+None.
 
 ## Changes addressed
 

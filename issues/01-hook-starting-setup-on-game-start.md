@@ -1,5 +1,9 @@
 # Hook Starting Setup into on_game_start
 
+## Status
+
+Done
+
 ## Parent PRD
 
 `prds/starting-setup.md`
@@ -21,6 +25,8 @@ Create the scaffolding for all Starting Setup changes. This means:
 3. Wire this top-level effect into the existing `on_game_start` on_action in `mp_limits_on_actions.txt`, running it **before** the MP limits initialization (so released countries exist before tier classification runs).
 
 The empty effects should be no-ops that do nothing until the regional issues fill them in. This ensures the mod loads cleanly at every step.
+
+Note: this issue remains useful as scaffolding for any Starting Setup changes that still need runtime hooks, but lobby-visible border and subject changes should now be implemented through `main_menu/setup/start/*` instead.
 
 ## Mod files involved
 

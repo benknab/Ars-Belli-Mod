@@ -1,5 +1,9 @@
 # Release Unified Silesia from Bohemia
 
+## Status
+
+Todo
+
 ## Parent PRD
 
 `prds/starting-setup.md`
@@ -14,7 +18,7 @@ HITL
 
 ## What to change
 
-At game start, release a unified Silesia from Bohemia to act as a buffer in the HRE:
+At bookmark start, release a unified Silesia from Bohemia to act as a buffer in the HRE:
 
 1. **Release a unified Silesia** tag that combines all Silesian minor territories into one country, along with the **Upper Lusatia** province.
 
@@ -23,12 +27,16 @@ Implementation notes:
 - If a unified tag does not exist, an alternative approach is to release one Silesian minor and then transfer the other Silesian provinces + Upper Lusatia to it.
 - Verify the combined development of all Silesian provinces + Upper Lusatia is sufficient for the country to survive initial aggression from Bohemia, Poland, and Brandenburg.
 - This is explicitly a stopgap measure until proper HRE content is implemented.
+- Implement this in bookmark/start files so the changes are visible in the lobby and country picker from day 0.
+- Use `main_menu/setup/start/10_countries.txt` for ownership and country setup changes.
+- Use `main_menu/setup/start/12_diplomacy.txt` if Bohemia starts with subject or other diplomatic links that must be removed/adjusted.
+- Preserve vanilla formatting/order and annotate changed spots with short explanatory comments.
 
 ## Mod files involved
 
-- `in_game/common/scripted_effects/starting_setup_effects.txt` -- **Modify**. Fill in the HRE regional effect with Silesia release/creation logic.
-- Possibly `in_game/common/country_tags/` -- **New file** if a unified Silesia tag needs to be defined.
-- Possibly `in_game/history/countries/` -- **New file** if a unified Silesia needs history setup.
+- `main_menu/setup/start/10_countries.txt` -- **Modify**. Release or create unified Silesia in the bookmark state.
+- `main_menu/setup/start/12_diplomacy.txt` -- **Modify if needed**. Remove or adjust starting diplomatic links.
+- Possibly `in_game/setup/countries/` or other country-definition files -- **New file** if a unified Silesia tag must be created.
 
 ## Acceptance criteria
 
@@ -40,7 +48,7 @@ Implementation notes:
 
 ## Blocked by
 
-- `issues/01-hook-starting-setup-on-game-start.md`
+None.
 
 ## Changes addressed
 

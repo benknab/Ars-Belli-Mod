@@ -1,5 +1,9 @@
 # Change Jalayirid Government and Release Eretnids
 
+## Status
+
+Todo
+
 ## Parent PRD
 
 `prds/starting-setup.md`
@@ -14,7 +18,7 @@ HITL
 
 ## What to change
 
-At game start, change the Jalayirid government type and release their Anatolian territory:
+At bookmark start, change the Jalayirid government type and release their Anatolian territory:
 
 1. **Change Jalayirid government** from Horde to Monarchy. Pick the most appropriate monarchy type for their culture/religion combination. Research available government types in vanilla and select one that preserves flavor without the bugged Horde mechanics.
 2. **Release the Eretnids** in Anatolia as an independent country. This opens up Anatolia so Ottomans, Byzantium, or other regional powers can emerge.
@@ -23,11 +27,15 @@ Implementation notes:
 - Research the Jalayirid tag name in vanilla EU5 (likely `JAL` or similar).
 - Research which government reform/type is appropriate for an Ilkhanid-successor Islamic monarchy.
 - Research the Eretnid tag and their historical Anatolian territory to ensure the correct provinces are released.
-- The government change may require `change_government` or a similar effect -- verify EU5 scripting syntax.
+- Prefer bookmark/start-file implementation if the government and Eretnid setup need to be visible from lobby/day 0.
+- Use `main_menu/setup/start/10_countries.txt` for country ownership and government setup.
+- Use `main_menu/setup/start/12_diplomacy.txt` only if subject links or other starting diplomacy must change.
+- Preserve vanilla formatting/order and annotate changed spots with short explanatory comments.
 
 ## Mod files involved
 
-- `in_game/common/scripted_effects/starting_setup_effects.txt` -- **Modify**. Fill in the Jalayirid regional effect with government change and Eretnid release logic.
+- `main_menu/setup/start/10_countries.txt` -- **Modify**. Update the Jalayirid government setup and release Eretnid territory from the bookmark state.
+- `main_menu/setup/start/12_diplomacy.txt` -- **Modify if needed**. Remove or adjust starting subject links.
 
 ## Acceptance criteria
 
@@ -40,7 +48,7 @@ Implementation notes:
 
 ## Blocked by
 
-- `issues/01-hook-starting-setup-on-game-start.md`
+None.
 
 ## Changes addressed
 
