@@ -10,6 +10,17 @@ Three top-level folders, loaded in this order:
 
 Within each folder, the layout mirrors `Europa Universalis V/game/`.
 
+## Local file locations
+
+- Vanilla install path pattern: `<steam_library>/steamapps/common/Europa Universalis V/game/`
+- Local deployed mod path pattern: `<documents>/Paradox Interactive/Europa Universalis V/mod/<mod_name>/`
+- Steam Workshop EU5 mod path pattern: `<steam_library>/steamapps/workshop/content/3450310/<workshop_id>/`
+
+Notes:
+- `3450310` is the EU5 Steam app/workshop content ID.
+- Downloaded Workshop mods typically contain `.metadata/metadata.json` under each `<workshop_id>` folder.
+- Useful for researching mods without GitHub sources: inspect `main_menu/`, `in_game/`, and `.metadata/metadata.json` in the Workshop folder directly.
+
 ## common/ subfolders (in_game)
 
 Relevant to Ars Belli:
