@@ -77,6 +77,30 @@ Key vanilla on_actions relevant to Ars Belli:
 - `on_yearly_pulse` / `on_monthly_pulse` -- recurring effects
 - `cmm_on_mod_registration` -- CMF hook for registering mod menu settings
 
+## Start-date world setup strategy
+
+If a change must be visible in the lobby or country picker on day 0, prefer `main_menu/setup/start/*` over `in_game` on_actions.
+
+What we learned from inspecting released EU5 alt-start mods:
+- Large start-date mods implement borders, subjects, wars, and situations in `main_menu/setup/start/*`
+- Their `in_game` startup logic is used for follow-up flavor/events, not for building the initial world map
+- We do **not** currently have evidence that vanilla ownership or subject entries can be cleanly removed with small additive diff files
+
+Practical rule:
+- Use `in_game` `on_game_start` / pulses for day-1 or post-start changes
+- Use `main_menu/setup/start/10_countries.txt` and `12_diplomacy.txt` when the world must already exist differently before unpause
+
+Recommended maintenance approach for lobby-visible setup changes:
+- Copy the exact vanilla file with the same filename
+- Keep overrides limited to the fewest possible start files, ideally `10_countries.txt` and `12_diplomacy.txt`
+- Preserve vanilla formatting and ordering
+- Add `ARS BELLI START/END` comments around each modified block
+- Add a header noting the vanilla EU5 version the file was copied from
+
+Tradeoff:
+- This creates maintenance debt when vanilla start files change upstream
+- But it is currently the only evidenced path for reliable lobby-visible border and subject changes
+
 ## scripted_effects and scripted_triggers
 
 Cannot use `INJECT` -- it silently replaces instead of merging. To extend vanilla scripted effects:
