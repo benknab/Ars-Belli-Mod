@@ -700,7 +700,7 @@ war_manager = {
 		#Bohemia and Vassals
 		# Ars Belli: collapsed Silesian minors no longer need individual attacker entries here.
 		attacker = BOH
-		attacker = WRC
+		attacker = SIL
 		attacker = MVA
 		#Hungary and Vassals
 		defender = HUN
@@ -714,7 +714,7 @@ war_manager = {
 		#Bohemia and Vassals
 		# Ars Belli: collapsed Silesian minors no longer need individual attacker entries here.
 		attacker = BOH
-		attacker = WRC
+		attacker = SIL
 		attacker = MVA
 		#Poland and Vassals
 		defender = POL
@@ -733,7 +733,7 @@ war_manager = {
 		#Bohemia and Vassals
 		# Ars Belli: collapsed Silesian minors no longer need individual attacker entries here.
 		attacker = BOH
-		attacker = WRC
+		attacker = SIL
 		attacker = MVA
 
 		defender = HAB

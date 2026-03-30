@@ -314,7 +314,7 @@ diplomacy_manager = {
 
     #-------Bohemia-------
     dependency = { first = BOH second = MVA subject_type = vassal start_date = 1333.1.1 } #Prince Charles is made Margrave of Moravia, and confirmed heir to Bohemia
-    # Ars Belli: the unified Wrocław-led Silesian start state replaces Bohemia's Silesian subject web.
+    # Ars Belli: the unified Silesian start state replaces Bohemia's Silesian subject web.
     scripted_mutual = { first = BOH second = LBV type = alliance }
 
     #-------Poland-------

@@ -40359,9 +40359,9 @@ countries = {
 		dynasty = piast_dynasty
 	}
 
-	WRC = {	#Wrocław
+	SIL = {	#Silesia
 		own_control_core = {
-			# Ars Belli: consolidate the Silesian minors and Upper Lusatia into a single independent start tag.
+			# Ars Belli: consolidate the Silesian minors and Upper Lusatia into a single independent Silesian start tag.
 			wroclaw sroda_slaska
 			bautzen gorlitz hoyerswerda rothenburg_oberlausitz marienstern
 			zagan krosno_odrzanskie sulechow zary
