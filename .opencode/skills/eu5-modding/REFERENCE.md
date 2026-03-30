@@ -94,7 +94,7 @@ Recommended maintenance approach for lobby-visible setup changes:
 - Copy the exact vanilla file with the same filename
 - Keep overrides limited to the fewest possible start files, ideally `10_countries.txt` and `12_diplomacy.txt`
 - Preserve vanilla formatting and ordering
-- Add `ARS BELLI START/END` comments around each modified block
+- Add short explanatory comments at each changed spot; avoid fake `START/END` wrappers when the edits are geographically or structurally split
 - Add a header noting the vanilla EU5 version the file was copied from
 
 Tradeoff:

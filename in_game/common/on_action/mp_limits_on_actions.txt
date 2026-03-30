@@ -1,6 +1,5 @@
 monthly_country_pulse = {
 	on_actions = {
-		starting_setup_monthly_pulse
 		mp_limits_monthly_pulse
 	}
 }
@@ -15,12 +14,6 @@ on_game_start = {
 starting_setup_game_start = {
 	effect = {
 		starting_setup_game_start_effect = yes
-	}
-}
-
-starting_setup_monthly_pulse = {
-	effect = {
-		starting_setup_monthly_pulse_effect = yes
 	}
 }
 

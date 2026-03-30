@@ -5,15 +5,3 @@ mp_over_alliance_limit_penalty = {
 	tax_income_efficiency = -0.9
 	land_morale_modifier = -0.4
 }
-
-ars_belli_starting_setup_fired = {
-	game_data = {
-		category = country
-	}
-}
-
-ars_belli_starting_setup_pending = {
-	game_data = {
-		category = country
-	}
-}
