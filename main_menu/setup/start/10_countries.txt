@@ -12913,11 +12913,9 @@ countries = {
 
 	ALB = {
 		own_control_core = {
-			durres
-		}
-
-		our_cores_conquered_by_others = {
-			elbasan kavaje kruje tirana
+			# Ars Belli: consolidate the Albanian vassal patchwork into the Kingdom of Albania.
+			durres elbasan kavaje kruje tirana
+			berat ballsh
 		}
 
 		starting_technology_level = 3
@@ -12960,7 +12958,7 @@ countries = {
 	}
 
 	THP = {
-		own_control_core = {
+		our_cores_conquered_by_others = {
 			kruje tirana
 		}
 
@@ -12970,7 +12968,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "catholic_monarchy"
+		include = "catholic_monarchy_not_present"
 		government = {
 			type = monarchy
 			heir_selection = cognatic_primogeniture
@@ -12986,7 +12984,7 @@ countries = {
 	}
 
 	MZK = {
-		own_control_core = {
+		our_cores_conquered_by_others = {
 			berat ballsh
 		}
 
@@ -12996,7 +12994,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "catholic_monarchy"
+		include = "catholic_monarchy_not_present"
 		government = {
 			type = monarchy
 			heir_selection = cognatic_primogeniture
@@ -13019,7 +13017,7 @@ countries = {
 	}
 
 	ANT = {
-		own_control_core = {
+		our_cores_conquered_by_others = {
 			elbasan
 		}
 
@@ -13029,7 +13027,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "catholic_monarchy_no_coast"
+		include = "catholic_monarchy_not_present"
 		government = {
 			type = monarchy
 			heir_selection = cognatic_primogeniture
@@ -13049,7 +13047,7 @@ countries = {
 	}
 
 	MTR = {
-		own_control_core = {
+		our_cores_conquered_by_others = {
 			kavaje
 		}
 
@@ -13059,7 +13057,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "catholic_monarchy"
+		include = "catholic_monarchy_not_present"
 		government = {
 			type = monarchy
 			heir_selection = cognatic_primogeniture
