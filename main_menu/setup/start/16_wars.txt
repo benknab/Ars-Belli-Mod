@@ -702,9 +702,8 @@ war_manager = {
 		attacker = BOH
 		attacker = SIL
 		attacker = MVA
-		#Hungary and Vassals
+		#Hungary
 		defender = HUN
-		defender = BOS
 		#either use end_date or start_date = <date> with months = <int>. Can skip months to use NDefines::NDiplomacy::TRUCE_YEARS instead
 		start_date = 1332.5.1
 		months = 60
@@ -743,9 +742,8 @@ war_manager = {
 	}
 
 	truce = { #Hungarian-Austrian War of 1322-1337
-		#Hungary and Vassals
+		#Hungary
 		defender = HUN
-		defender = BOS
 
 		defender = HAB
 		#either use end_date or start_date = <date> with months = <int>. Can skip months to use NDefines::NDiplomacy::TRUCE_YEARS instead
